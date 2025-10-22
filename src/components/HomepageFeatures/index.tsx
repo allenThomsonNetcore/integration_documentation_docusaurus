@@ -16,31 +16,31 @@ const SDKList: SDKItem[] = [
     title: 'Android',
     icon: '🤖',
     description: 'Integrate Netcore SDK into your Android applications with native support.',
-    link: '/docs/android/base-sdk-integration',
+    link: '/docs/Android/base-sdk-integration',
   },
   {
     title: 'iOS',
     icon: '🍎',
     description: 'Add Netcore SDK to your iOS apps with Swift and Objective-C support.',
-    link: '/docs/ios/base-sdk-integration',
+    link: '/docs/intro',
   },
   {
     title: 'Flutter',
     icon: '🎯',
     description: 'Cross-platform integration for Flutter applications on Android and iOS.',
-    link: '/docs/flutter/integration-guide',
+    link: '/docs/intro',
   },
   {
     title: 'React Native',
     icon: '⚛️',
     description: 'Build mobile apps with React Native and Netcore SDK integration.',
-    link: '/docs/react-native/integration-guide',
+    link: '/docs/intro',
   },
   {
     title: 'Web',
     icon: '🌐',
     description: 'Integrate Netcore SDK into your web applications with JavaScript.',
-    link: '/docs/web/integration-guide',
+    link: '/docs/intro',
   },
 ];
 
