@@ -1,0 +1,16 @@
+---
+pagination_next: null
+pagination_prev: null
+---
+
+## Add meta-data to AndroidManifest.xml
+
+Add this to Android manifest file inside the application tag:
+
+```xml
+<application>
+  <meta-data
+    android:name="SMT_APP_ID"
+    android:value="YOUR_SMARTECH_APP_ID_HERE" /> <!-- asset id present in the netcore panel -->
+</application>
+```

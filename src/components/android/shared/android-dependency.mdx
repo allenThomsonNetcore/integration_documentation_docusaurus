@@ -1,0 +1,82 @@
+---
+pagination_next: null
+pagination_prev: null
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+### Step 1: Add Maven Repository
+
+<Tabs groupId="build-system">
+  <TabItem value="groovy" label="Groovy DSL" default>
+
+**In project's `build.gradle` file:**
+
+```groovy
+repositories {
+    maven { url 'https://artifacts.netcore.co.in/artifactory/android' }
+}
+```
+
+  </TabItem>
+  <TabItem value="kotlin" label="Kotlin DSL">
+
+**In project's `settings.gradle.kts` file:**
+
+```kotlin
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://artifacts.netcore.co.in/artifactory/android") }
+    }
+}
+```
+
+  </TabItem>
+</Tabs>
+
+### Step 2: Add SDK Dependency
+
+<Tabs groupId="build-system">
+  <TabItem value="groovy" label="Groovy DSL" default>
+
+**In app's `build.gradle` file:**
+
+```groovy
+dependencies {
+    api "com.netcore.android:smartech-sdk:${SMARTECH_BASE_SDK_VERSION}"
+}
+```
+
+**In `gradle.properties` file:**
+
+```properties
+SMARTECH_BASE_SDK_VERSION=3.5.8
+```
+
+  </TabItem>
+  <TabItem value="kotlin" label="Kotlin DSL">
+
+**In app's `build.gradle.kts` file:**
+
+```kotlin
+dependencies {
+    api("com.netcore.android:smartech-sdk:${property("SMARTECH_BASE_SDK_VERSION")}")
+}
+```
+
+**In `gradle.properties` file:**
+
+```properties
+SMARTECH_BASE_SDK_VERSION=3.5.8
+```
+
+  </TabItem>
+</Tabs>
+
+:::tip
+After adding the dependency, sync your project with Gradle files to download the Netcore SDK.
+:::

@@ -1,0 +1,51 @@
+---
+pagination_next: null
+pagination_prev: null
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+## SDK Initialization (Native Android only)
+
+To initiate the Netcore CE SDK, add the following code in your `MyApplication` class which extends the Android `Application` class:
+
+<Tabs>
+  <TabItem value="kotlin" label="Kotlin" default>
+
+```kotlin
+import java.lang.ref.WeakReference
+import android.content.Context
+import com.netcore.android.Smartech
+class MyApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        // Initialize Smartech Sdk
+        Smartech.getInstance(WeakReference(applicationContext)).initializeSdk(this)
+        // Add the below line for debugging logs
+        Smartech.getInstance(WeakReference(applicationContext)).setDebugLevel(9)
+        // Add the below line to track app install and update by smartech
+        Smartech.getInstance(WeakReference(applicationContext)).trackAppInstallUpdateBySmartech()
+    }
+}
+```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+```java
+import java.lang.ref.WeakReference;
+import android.content.Context;
+import com.netcore.android.Smartech;
+
+@Override 
+public void onCreate() {
+    super.onCreate();
+    Smartech.getInstance(new WeakReference<>(getApplicationContext())).initializeSdk(this);
+    Smartech.getInstance(new WeakReference<>(context)).trackAppInstallUpdateBySmartech();
+    Smartech.getInstance(new WeakReference<>(getApplicationContext())).setDebugLevel(9);
+}
+```
+
+  </TabItem>
+</Tabs>
