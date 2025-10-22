@@ -20,7 +20,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/android/base-sdk-integration">
+            to="/docs/Android/base-sdk-integration">
             Get Started →
           </Link>
         </div>
