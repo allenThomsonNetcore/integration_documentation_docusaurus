@@ -66,7 +66,9 @@
   color: #FC5E02 !important;
 }
 
-[data-theme='dark'] .breadcrumbs__link--active,
+[data-theme='dark'] .breadcrumbs__link--active{
+ color: #c6c6c6 !important;
+}
 [data-theme='dark'] .breadcrumbs__link:hover {
   color: #FC5E02 !important;
 }
@@ -78,4 +80,46 @@
 
 [data-theme='dark'] .tabs__item {
   color: #fff !important;
+}
+
+/* Table of contents (right sidebar) active / hover link color */
+/* generic toc selectors */
+.toc .tocItemLink--active,
+.toc .tocItemLink.is-active,
+.toc .tocLinkActive,
+.toc .tocItemLink--active code,
+.toc .tocItemLink.is-active code,
+.toc .tocLinkActive code {
+  color: #FC5E02 !important;
+}
+
+/* Docusaurus specific TOC class selectors (covers code inside links too) */
+.table-of-contents__link--active,
+.table-of-contents__link--active code,
+.table-of-contents__link.toc-highlight.table-of-contents__link--active,
+.table-of-contents__link.toc-highlight.table-of-contents__link--active code,
+.table-of-contents__link:hover,
+.table-of-contents__link:focus,
+.table-of-contents__link:hover code,
+.table-of-contents__link:focus code,
+.contents__link:hover,
+.contents__link:focus {
+  color: #FC5E02 !important;
+}
+
+/* Ensure dark theme also uses the same orange color */
+[data-theme='dark'] .table-of-contents__link--active,
+[data-theme='dark'] .table-of-contents__link--active code,
+[data-theme='dark'] .table-of-contents__link.toc-highlight.table-of-contents__link--active,
+[data-theme='dark'] .table-of-contents__link.toc-highlight.table-of-contents__link--active code,
+[data-theme='dark'] .table-of-contents__link:hover,
+[data-theme='dark'] .table-of-contents__link:focus,
+[data-theme='dark'] .table-of-contents__link:hover code,
+[data-theme='dark'] .table-of-contents__link:focus code,
+[data-theme='dark'] .contents__link:hover,
+[data-theme='dark'] .contents__link:focus,
+[data-theme='dark'] .toc .tocItemLink--active,
+[data-theme='dark'] .toc .tocItemLink.is-active,
+[data-theme='dark'] .toc .tocLinkActive {
+  color: #FC5E02 !important;
 }
